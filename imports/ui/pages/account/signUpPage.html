@@ -1,0 +1,44 @@
+<template name="signUpPage">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        {{>DynaText tag="h1" class="header"
+            text=(__ "MFS.account.signUp.header")}}
+      </div>
+      {{#autoForm id="signUpForm" schema=schema resetOnSuccess=false}}
+
+        <div class="col s6">
+          {{> afQuickField name="username"}}
+        </div>
+
+        <div class="col s6">
+          {{> afQuickField name="email"}}
+        </div>
+
+        <div class="col s6">
+          {{> afQuickField name="password"}}
+        </div>
+
+        <div class="col s6">
+          {{> afQuickField name="passwordConfirmation"}}
+        </div>
+
+        <div class="col s12">
+          <a href="#signIn" class="" style="padding-right: 2em;">
+            {{__ 'MFS.account.signIn.label'}}
+          </a>
+          <a href="#forgotPassword" class="">
+            {{__ 'MFS.account.passwordForgot.label'}}
+          </a>
+        </div>
+
+        <div class="col s12" style="padding-top: 1em;">
+          <button type="submit" class="btn waves-effect">
+            {{__ 'MFS.account.signUp.label'}}
+          </button>
+        </div>
+
+      {{/autoForm}}
+    </div>
+  </div>
+</template>

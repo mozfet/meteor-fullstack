@@ -1,0 +1,23 @@
+<template name="accountPage">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        {{>DynaText tag="h1" class="header"
+            text=(__ "MFS.account.update.header")}}
+
+        {{#autoForm id="updateAccount" schema=schema doc=doc type='normal'}}
+          <div class="col s12 m6">
+            {{> afQuickField name="email"}}
+          </div>
+          <div class="col s12 m6">
+            {{> afQuickField name="username"}}
+          </div>
+          <div class="col s12">
+            <button type="submit" class="btn waves-effect">
+              {{__ 'MFS.account.update.label'}}</button>
+          </div>
+        {{/autoForm}}
+      </div>
+    </div>
+  </div>
+</template>

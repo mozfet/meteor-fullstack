@@ -1,0 +1,45 @@
+{
+  "humanName": "Meteor Fullstack",
+  "humanDescription": "Meteor template application that includes all the boilerplate and setup ready to use and scripts to make it easy to customise and get it production ready in minutes.",
+  "shortName": "MFS",
+  "userFolder": "/Users/macbookpro",
+  "projectsFolder": "projects",
+  "projectName": "meteor-fullstack",
+  "projectFolder": "~/projects/meteor-fullstack",
+  "version": "1.0.1",
+  "author": "The Expert Box B.V.",
+  "email": "info@expertbox.com",
+  "licence": "See LICENCE.md",
+  "urlWebsite": "https://www.genyresume.com",
+  "galaxy": {
+    "hosts": {
+      "prod": "www.meteor-fullstack.com",
+      "stage": "fullstack.eu.meteorapp.com"
+    }
+  },
+  "mongodb": {
+    "hosts": {
+      "prod": "",
+      "stage": ""
+    }
+  },
+  "icons": {
+    "backgroundColor": "white",
+    "foregroundColor": "black",
+    "font": "~/projects/meteor-fullstack/public/fonts/roboto/Roboto-Bold.woff",
+    "textStrokeColor": "black",
+    "textStrokeWidth": "1",
+    "textFillColor": "black"
+  },
+  "mobileApp": {
+    "backgroundColor": "0xffffffff",
+    "iOS": {
+      "appId": "com.meteor-fullstack"
+    }
+  },
+  "java": {
+  },
+  "androidStudio": {
+    "buildToolsVersion": "28.0.3"
+  }
+}

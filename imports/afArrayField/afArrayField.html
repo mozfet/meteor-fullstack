@@ -1,0 +1,66 @@
+<template name="afArrayField_materialize">
+  <div class="collection js-autoform-array">
+
+    <!-- header row -->
+    <div class="collection-item dragHeader">
+      {{afFieldLabelText name=atts.name}}
+
+      <!-- if there are less items than the maximum -->
+      {{#if afArrayFieldHasLessThanMaximum name=atts.name minCount=this.atts.minCount maxCount=this.atts.maxCount}}
+
+        <!-- show add button  -->
+        <a href="#!" class="secondary-content autoform-add-item" data-autoform-field="{{atts.name}}" data-autoform-minCount="{{atts.minCount}}" data-autoform-maxCount="{{atts.maxCount}}">
+          {{> tooltippedIcon icon="add" iconClass="" text="Add" position="left"}}
+        </a>
+      {{/if}}
+    </div>
+
+    <!-- if array is invalid -->
+    {{#if afFieldIsInvalid name=atts.name}}
+
+      <!-- show error reason text to user -->
+      <div class="collection-item">
+        <span class="red-text">{{{afFieldMessage name=atts.name}}}</span>
+      </div>
+    {{/if}}
+
+
+    <!-- for each item -->
+    {{#afEachArrayItem name=atts.name minCount=this.atts.minCount maxCount=this.atts.maxCount
+        arrayItemTemplate=atts.arrayItemTemplate}}
+
+      <div class="collection-item js-autoform-array-item">
+        <div class="primary-content" style="width: calc(100% - 5rem);">
+          <!-- if custom array template is provided -->
+          {{#if ../atts.arrayItemTemplate}}
+
+            Template {{../atts.arrayItemTemplate}}
+            Name {{this.name}}
+
+            <!-- show dynamic template -->
+            {{> Template.dynamic template=../atts.arrayItemTemplate data=this}}
+
+          <!-- else  -->
+          {{else}}
+
+            <!-- show as quickfield -->
+            {{> afQuickField name=this.name label=false options=afOptionsFromSchema}}
+
+          {{/if}}
+        </div>
+
+        <!-- if there are more than the minimum of items in the array -->
+        {{#if afArrayFieldHasMoreThanMinimum name=../atts.name minCount=../atts.minCount maxCount=../atts.maxCount}}
+
+          <!-- show the remove button -->
+          <div class="right" style="width: 4rem; margin-top: -4rem">
+            <a href="#" class="secondary-content autoform-remove-item">
+              {{> tooltippedIcon icon="delete" iconClass="" text="Remove" position="left"}}
+            </a>
+          </div>
+        {{/if}}
+      </div>
+
+    {{/afEachArrayItem}}
+  </div>
+</template>

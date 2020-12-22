@@ -1,0 +1,20 @@
+<template name="signInThirdParty">
+    {{#if currentUser}}
+      <div class="col s12">
+        <p>You are already signed in.</p>
+      </div>
+    {{else}}
+      <div class="col s3 m4 l3">
+        <img class="responsive-img js-account-signin-linkedin"
+            src="{{cdnUrl 'images/oauth/linkedInLogo.png'}}">
+      </div>
+      <div class="col s3 m4 l3">
+        <img class="responsive-img js-account-signin-facebook"
+            src="{{cdnUrl 'images/oauth/facebookLogo.png'}}">
+      </div>
+      <div class="col s3 m4 l3">
+        <img class="responsive-img js-account-signin-biocryptology"
+            src="{{cdnUrl 'images/oauth/biocryptologyLogo.jpg'}}">
+      </div>
+    {{/if}}
+</template>

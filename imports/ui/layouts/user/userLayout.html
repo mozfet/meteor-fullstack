@@ -1,0 +1,20 @@
+<template name="userLayout">
+	<div class="site">
+
+		{{> navbar}}
+
+		<main class="site-content">
+			<div id="content">
+				{{#if currentUser}}
+					{{> Template.dynamic template=main data=data}}
+				{{else}}
+					{{> signInPage}}
+				{{/if}}
+			</div>
+			{{> DynaView}}
+		</main>
+
+		{{> footer}}
+
+	</div>
+</template>

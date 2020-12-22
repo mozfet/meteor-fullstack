@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /secret
+Disallow: /sign-in
+Disallow: /sign-out
+Sitemap: https://www.fullstack.eu.meteorapp.com/sitemap.xml

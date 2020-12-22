@@ -1,0 +1,110 @@
+_locale: 'en-US'
+_splitKey: '.'
+_namespace: "MFS"
+
+title: Meteor Fullstack
+
+navigation.home: Homepage
+navigation.messages: Messages
+navigation.reviews: Reviews
+navigation.contact: Contact Us
+navigation.terms: Terms of Use
+navigation.menu: More
+navigation.profile: Profile
+navigation.messaging: Messages
+navigation.account: Account
+navigation.admin: Admin
+navigation.signin: Sign In
+navigation.signout: Sign Out
+
+footer.services.header: Meteor Fullstack
+footer.services.content: We do great stuff.
+footer.links.header: Links
+footer.copyright: "&copy; 2019 - Just Kidding"
+
+access.notAllowed: You do not have permission to view this content.
+
+home.header: Home
+home.content1: Here we tell our story, benefits, and call to action.
+
+contact.header: Contact Us
+contact.content1: We love hearing from you.
+contact.content2: "You can contact us by <a href='mailto:info@expertbox.com'>sending an email</a>."
+
+bookings.header: Bookings
+payment.header: Payment
+
+account.regular.header: Regular Account
+account.thirdParty.header: Third Party Login
+account.guest.header: Guest Account
+account.signUp.header: Account Registration
+account.signUp.label: Register
+account.signUp.failure: Unable to register this account.
+account.signUp.success: Thank you for registering.
+account.signIn.header: Account Sign In
+account.signIn.label: Sign In
+account.signIn.success: Signin successful
+account.signIn.failure: Error signing in
+account.signIn.alreadySignedIn: You are already signed in.
+account.signOut.label: Sign Out
+account.signOut.success: Signout successful
+account.signOut.failure: Error signing out
+account.update.header: Account Settings
+account.update.label: Update Account Setting
+account.update.success: Account Update Success
+account.update.failure: Account Update Failed
+account.passwordForgot.header: Password Reset
+account.passwordForgot.label: Forgot Password?
+account.passwordForgot.success: Check your email
+account.passwordForgot.failure: Do we know you?
+account.passwordReset.header: Reset Password
+account.passwordReset.label: Reset Password
+account.passwordReset.success: Password change successful
+account.passwordReset.failure: Error changing password
+account.verifyEmail.header: Verify Email
+account.verifyEmail.success: Email verification was successful
+account.verifyEmail.failure: Email verification has failed
+account.overview.header: Your Account
+account.form.email.label: Email
+account.form.email.placeholder: Email address linked to your account
+account.form.phone.label: Phone Number
+account.form.phone.placeholder: Mobile number during tour
+account.form.password.label: Password
+account.form.password.placeholder: A secret to identify you
+account.form.passwordConfirmation.label: Password Confirmation
+account.form.passwordConfirmation.placeholder: Same secret Again
+account.form.newsletter.label: Subscribe to our monthly newsletter
+account.form.username.label: Username
+account.form.username.placeholder: Unique name to identify yourself
+account.error.onlyUserAndAdminCanUpdate: Invalid Access Rights
+account.error.emailExists: Email already exists
+account.error.usernameExists: Username already exists
+
+profile.update.heading: Update Profile
+profile.label: Profile
+profile.form.title.label: Title
+profile.form.title.placeholder: E.g. Mr, Ms, Dr
+profile.form.firstName.label: First Name
+profile.form.firstName.placeholder: Your first given name
+profile.form.lastName.label: Last Name
+profile.form.lastName.placeholder: Your family name or surname
+profile.form.role.label: Role
+profile.form.role.placeholder: What do you do? E.g. Full Stack Developer, Graphic Designer
+profile.form.location.label: Location
+profile.form.location.placeholder: Where are you based? E.g. New York, London, Amsterdam
+profile.form.email.label: Email Address
+profile.form.email.placeholder: Email Address
+profile.form.languages.label: Languages
+profile.form.languages.placeholder: Which languages do you speak?
+
+profile.update.success: Profile Update Success
+profile.update.failure: Profile Update Failure
+profile.update.cancel: Profile Update Cancelled
+
+terms.header: Terms and Conditions
+terms.content1: Here will be listed all you shall and shall not do and what we shall do and shall not do.
+
+admin.header: Admin
+
+notFound.header: Not Found
+notFound.content1: The page you have tried to reach does not exist.

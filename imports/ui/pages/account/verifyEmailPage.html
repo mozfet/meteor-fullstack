@@ -1,0 +1,19 @@
+<template name="verifyEmailPage">
+  <div class="container">
+    <div class="row">
+      <h1 class="header">{{__ 'MFS.account.verifyEmail.header'}}</h1>
+      {{#if instance.state.isVerified.get}}
+        {{> DynaText text="Thank you. Your email is verified."}}
+      {{else}}
+        {{> DynaText text=instance.state.reason.get}}
+      {{/if}}
+
+      {{#if currentUser}}
+        <a href="#account" class="btn">Setup Account</a>
+      {{else}}
+        <a href="#forgotPassword" class="btn">
+          Reset Password to Verify again.</a>
+      {{/if}}
+    </div>
+  </div>
+</template>

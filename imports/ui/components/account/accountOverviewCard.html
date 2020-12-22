@@ -1,0 +1,20 @@
+<template name="accountOverviewCard">
+  <div class="card">
+    <div class="card-content">
+      <div class="card-title header">{{__ 'MFS.account.overview.header'}}</div>
+      <div class="row">
+        <div class="col s12">
+          {{#if currentUser}}
+            {{#with currentUser}}
+              Name - {{profile.name}}<br>
+              Email - {{profile.email}}<br><br>
+            {{/with}}
+            <button class="btn js-sign-out-button">Sign out</button>
+          {{else}}
+            You are not signed in.
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

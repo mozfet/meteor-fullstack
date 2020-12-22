@@ -1,0 +1,16 @@
+<template name="adminPage">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h1 class="header largeTextSize">
+          {{__ "MFS.admin.header"}}
+        </h1>
+        {{#if isAdmin}}
+          <a href="#logs" class="btn">View Logs</a>
+        {{else}}
+          {{__ "MFS.access.notAllowed"}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>

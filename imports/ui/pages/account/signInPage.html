@@ -1,0 +1,52 @@
+<template name="signInPage">
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        {{>DynaText tag="h1" class="header" text=(__ "MFS.account.signIn.header")}}
+
+        <!-- if user is signed in -->
+        {{#if currentUser}}
+
+          <!-- already signed in -->
+          {{>DynaText tag="p" class="p"
+              text=(__ "MFS.account.signIn.alreadySignedIn")}}
+          <button class="btn js-sign-out-button">
+            {{__ 'MFS.account.signOut.label'}}
+          </button>
+
+        <!-- else - user is not signed in -->
+        {{else}}
+
+          <!-- social account sign in -->
+          <div class="col s12 m6 push-m6 push-l6">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-title">
+                  {{__ 'MFS.account.thirdParty.header'}}
+                </div>
+                <div class="row">
+                  {{> signInThirdParty}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- email password account sign in-->
+          <div class="col s12 m6 pull-m6 pull-l6">
+            <div class="card">
+              <div class="card-content">
+                <div class="card-title">
+                  {{__ 'MFS.account.regular.header'}}
+                </div>
+                <div class="row">
+                  {{> signInFormEmailPassword}}
+                </div>
+              </div>
+            </div>
+          </div>
+
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</template>

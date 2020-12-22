@@ -1,0 +1,378 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff2), format('woff2');
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+}
+
+// use custom wrapping for materializecss with custom color schemes
+@import "../imports/ui/components/material/materialize.scss";
+
+// use standard materializecss with ugly pink color scheme
+// @import "../node_modules/materialize-css/sass/materialize.scss";
+
+// add styles for autoform materialize
+@import "{mozfet:autoform-materialize}/style.scss";
+
+// add styles for DynaText
+// @import "../imports/ui/components/DynaText/DynaText.scss";
+
+.btn {
+  background-color: $primary-color;
+}
+
+.btn:hover {
+  background-color: $primary-color-dark;
+}
+
+.activity {
+  color: $link-color;
+}
+
+.header {
+  color: $primary-color;
+}
+
+.primary-color-text {
+  color: $primary-color
+}
+
+.secondary-color-text {
+  color: $secondary-color
+}
+
+.primary-color {
+  background-color: $primary-color
+}
+
+.secondary-color {
+  background-color: $secondary-color
+}
+
+
+.disable-selection{
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -webkit-user-select:none;
+}
+
+ul.collection.border {
+  border: 1px solid $collection-border-color;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+ul.collection.with-header.border {
+  border: 1px solid $collection-border-color;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+li.collection-header.border {
+  border-bottom: 1px solid $collection-border-color;
+}
+
+
+// styling to match https://www.wrappixel.com/demos/admin-templates/materialart/html/horizontal-fullwidth/index4.html
+$custom-color-navbar-background: #2962FF;
+$custom-color-navbar-background: #2962FF;
+$custom-color-footer-background: #2962FF;
+$custom-color-body-background: #EEF5F9;
+$custom-color-gradient1-start: #FE8C81;
+$custom-color-gradient1-end: #FBD323;
+$custom-color-gradient2-start: #7F9BFF;
+$custom-color-gradient2-end: #2DDEFF;
+$custom-color-gradient3-start: #3ED2B9;
+$custom-color-gradient3-end: #4DB5C1;
+$custom-color-text-grey-dark: #5B616E;
+$custom-color-text-grey-light: #9098AC;
+
+body {
+  background: $custom-color-body-background;
+}
+
+// .nav-fixed {
+//   background-color: $custom-color-navbar-background;
+// }
+
+// .page-footer {
+//   background-color: $custom-color-footer-background;
+// }
+
+.background {
+  background-color: $custom-color-body-background;
+}
+
+.no-shadow, .noShadow, .collapsible.noShadow, .collapsible.popout.noShadow,
+    .collapsible.popout > li.active {
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+.no-border, .noBorder {
+  border-style: none;
+  border-width: 0px;
+}
+
+.light-border, .borderLight, .lightBorder, .collapsible.popout.light-border {
+  border-style: solid;
+  border-width: 1px;
+  border-color: $collection-border-color;
+}
+
+.light-left-border {
+  border-left: 1px solid $collection-border-color;
+}
+
+.light-bottom-border {
+  border-bottom: 1px solid $collection-border-color;
+}
+
+.light-bottom-enforce-border {
+  border-bottom: 1px solid $collection-border-color !important;
+}
+
+tr.light-bottom-border:last-child {
+  border-bottom: 0px;
+}
+
+// screen sizes
+$smallScreenWidth: 600px;
+$mediumScreenWidth: 992px;
+
+// text sizes
+$minuteTextSize: 10px;
+$textSizeOffset: 2px;
+@mixin textSize($level) {
+  font-size: $minuteTextSize+$level*$textSizeOffset;
+}
+%minuteTextSize { @include textSize(0); }
+%tinyTextSize { @include textSize(1); }
+%smallTextSize { @include textSize(2); }
+%normalTextSize { @include textSize(3); }
+%mediumTextSize { @include textSize(4); }
+%largeTextSize { @include textSize(5) }
+%jumboTextSize { @include textSize(6); }
+%ultraTextSize { @include textSize(7); }
+.minute-text-size, .minuteTextSize { @extend %minuteTextSize; }
+.tiny-text-size, .tinyTextSize { @extend %tinyTextSize; }
+.small-text-size, .smallTextSize { @extend %smallTextSize; }
+.normal-text-size, .normalTextSize { @extend %normalTextSize; }
+.medium-text-size, .mediumTextSize { @extend %mediumTextSize; }
+.large-text-size, .largeTextSize { @extend %largeTextSize; }
+.jumbo-text-size, .jumboTextSize { @extend %jumboTextSize; }
+.ultra-text-size, .ultraTextSize { @extend %ultraTextSize; }
+
+// text weights
+$lightTextWeight: 500;
+$textWeightOffset: 100;
+@mixin textWeight($level) {
+  font-weight: $lightTextWeight+$level*$textWeightOffset;
+}
+%lightTextWeigth { @include textWeight(0); }
+%mediumTextWeigth { @include textWeight(1); }
+%heavyTextWeigth { @include textWeight(2); }
+.lightTextWeigth { @extend %lightTextWeigth; }
+.mediumTextWeigth { @extend %mediumTextWeigth; }
+.heavyTextWeigth { @extend %heavyTextWeigth; }
+
+// padding
+%noPadding { padding: 0px; }
+%paddingSmall { padding: 5px !important }
+%paddingMedium { padding: 10px !important }
+%paddingLarge { padding: 15px !important }
+.no-padding, .nopadding, .noPadding, .col.noPadding { @extend %noPadding; }
+.small-padding, .paddingSmall { @extend %paddingSmall; }
+.medium-padding, .paddingMedium { @extend %paddingMedium; }
+.large-padding, .paddingLarge { @extend %paddingLarge; }
+
+// margin
+%noMargin { margin: 0px; }
+%marginSmall { margin: 7px !important }
+%marginMedium { margin: 14px !important }
+%marginLarge { margin: 21px !important }
+.no-margin, .col.no-margin, .row.no-margin, .nomargin, .noMargin, .row.noMargin,
+    .col.noMargin { @extend %noMargin; }
+.small-margin, .marginSmall { @extend %marginSmall; }
+.medium-margin, .marginMedium { @extend %marginMedium; }
+.large-margin, .marginLarge { @extend %marginLarge; }
+
+// headings
+$smallestHeaderTextSize: 12px;
+$headerTextSizeOffset: 3px;
+$smallestHeaderTextWeigth: 500;
+$headerTextWeightOffset: 50;
+$smallestHeaderMargin: 5px;
+$headerMarginOffset: 1px;
+@mixin heading($level) {
+  font-size: $smallestHeaderTextSize+$level*$headerTextSizeOffset;
+  font-weight: $smallestHeaderTextWeigth+$level*$headerTextWeightOffset;
+  margin: $smallestHeaderMargin+$level+$headerMarginOffset;
+}
+// small screen
+@media all and (min-width: 0px) {
+  .heading1 {
+    @include heading(4)
+  }
+  .heading2 {
+    @include heading(3)
+  }
+  .heading3 {
+    @include heading(2)
+  }
+  .heading4 {
+    @include heading(1)
+  }
+  .heading5 {
+    @include heading(0)
+  }
+}
+// medium screen
+@media all and (min-width: $smallScreenWidth) {
+  .heading1 {
+    @include heading(5)
+  }
+  .heading2 {
+    @include heading(4)
+  }
+  .heading3 {
+    @include heading(3)
+  }
+  .heading4 {
+    @include heading(2)
+  }
+  .heading5 {
+    @include heading(1)
+  }
+}
+// large screen
+@media all and (max-width: $mediumScreenWidth){
+  .heading1 {
+    @include heading(6)
+  }
+  .heading2 {
+    @include heading(5)
+  }
+  .heading3 {
+    @include heading(4)
+  }
+  .heading4 {
+    @include heading(3)
+  }
+  .heading5 {
+    @include heading(2)
+  }
+}
+
+// backgrounds
+.gradientBackground1 {
+  background: linear-gradient(to right, $custom-color-gradient1-start, $custom-color-gradient1-end);
+  background-image: -webkit-linear-gradient(left, $custom-color-gradient1-start 0%, $custom-color-gradient1-end 100%);
+  background-image: -moz-linear-gradient(left, $custom-color-gradient1-start 0%, $custom-color-gradient1-end 100%);
+}
+
+.gradientBackground2 {
+  background: linear-gradient(to right, $custom-color-gradient2-start, $custom-color-gradient2-end);
+  background-image: -webkit-linear-gradient(left, $custom-color-gradient2-start 0%, $custom-color-gradient2-end 100%);
+  background-image: -moz-linear-gradient(left, $custom-color-gradient2-start 0%, $custom-color-gradient2-end 100%);
+}
+
+.gradientBackground3 {
+  background: linear-gradient(to right, $custom-color-gradient3-start, $custom-color-gradient3-end);
+  background-image: -webkit-linear-gradient(left, $custom-color-gradient3-start 0%, $custom-color-gradient3-end 100%);
+  background-image: -moz-linear-gradient(left, $custom-color-gradient3-start 0%, $custom-color-gradient3-end 100%);
+}
+
+.card .card-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0px;
+  padding: 0px;
+}
+
+// flexbox layout manager
+.flexColumn {
+  display: flex;
+  flex-flow: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-flow: row;
+}
+
+.filler {
+  flex: 1 1
+}
+
+.spacer-small {
+  min-width: 10px;
+  flex: 0 1 10px;
+}
+
+.spacer-medium {
+  min-width: 25px;
+  flex: 0 1 25px;
+}
+
+.spacer-large {
+  min-width: 50px;
+  flex: 0 1 50px;
+}
+
+// Small screens
+@media all and (min-width: 0px) {
+  #profilePicture { order: 1; width: 100%; min-height: 250px;}
+  #profileDetail  { order: 2; width: 100%; }
+}
+
+// Medium screens
+@media all and (min-width: $smallScreenWidth) {
+  #profilePicture { order: 2; width: 40%; min-height: 250px; }
+  #profileDetail  { order: 1; width: 60%; }
+}
+
+// Large screens
+@media all and (min-width: $mediumScreenWidth) {
+  #profilePicture { order: 2; width: 30%; min-height: 250px; }
+  #profileDetail  { order: 1; width: 70%; }
+}
+
+// fix the zoom issue on ios
+// https://stackoverflow.com/questions/2989263/disable-auto-zoom-in-input-text-tag-safari-on-iphone/6394497#6394497
+@media screen and (-webkit-min-device-pixel-ratio:0) and (max-device-width:1024px) {
+  input[type="color"],
+  input[type="date"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="email"],
+  input[type="month"],
+  input[type="number"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="text"],
+  input[type="time"],
+  input[type="url"],
+  input[type="week"],
+  select:focus,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+// enable sticky footer for materialize
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}

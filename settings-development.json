@@ -1,0 +1,29 @@
+{
+  "public": {
+    "version": "0.0.1",
+    "environment:": "DEVELOPMENT",
+    "isProduction": false,
+    "muteDebugLogging": false,
+    "host": {
+      "rootUrl": "http://localhost:3000",
+      "cdnUrl": "https://d213ily3zhgur4.cloudfront.net"
+    }
+  },
+  "linkedIn": {
+    "clientId": "86qh6ayzfxw0qi",
+    "secret": "pPavyhFhvXawgmwq"
+  },
+  "facebook": {
+    "appId": "306107110046137",
+    "secret": "477da61b85fe26332e8589e1c4c111bf"
+  },
+  "biocryptology": {
+    "wellknownConfig": "http://is.sb.biocryptology.net/.well-known/openid-configuration",
+    "loginStyle":  "popup",
+    "clientId": "your-dev-client-id",
+    "secret": "your-dev-secret",
+    "scopes": ["email", "openid"],
+    "claims": ["given_name", "family_name", "prefered_username", "locale"],
+    "callbackUrl": "http://160.226.132.146:3200/_oauth/biocryptology"
+  }
+}

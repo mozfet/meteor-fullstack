@@ -1,0 +1,233 @@
+<template name="navbar">
+
+  <!-- Horizonal Navigation bar -->
+  <nav class="nav-fixed noShadow">
+    <div class="nav-wrapper container">
+
+      <!-- menu button -->
+      <a href="#" data-target="slide-out" class="sidenav-trigger">
+        <i class="material-icons">menu</i>
+      </a>
+
+      <!-- app title as logo -->
+      <div>
+        <a href="#home/currentPage=home" id="logo-container" class="brand-logo"
+            style="font-size: 1.5em">
+          {{__ "MFS.title"}}
+        </a>
+      </div>
+
+      <!-- right navbar for large views -->
+      <ul id="nav-right" class="right hide-on-med-and-down">
+
+        <!-- messages item -->
+        {{> navbarItemMessages activePage=activePage}}
+
+        <!-- sign in -->
+        {{> navbarItemSignIn activePage=activePage}}
+
+        <!-- more dropdown menu trigger -->
+        <li>
+          <a class="dropdown-trigger" href="#!"
+              data-target="navbar-more-dropdown">
+            <i class="material-icons left">menu</i>
+            {{__ "MFS.navigation.menu"}}
+            <i class="material-icons right">arrow_drop_down</i>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <!-- more dropdown content -->
+  <ul id="navbar-more-dropdown" class="dropdown-content">
+    <li>
+      <a href="#terms">
+        <i class="material-icons left">library_books</i>
+        <div class="truncate">{{__ "MFS.navigation.terms"}}</div>
+      </a>
+    </li>
+    <li>
+      <a href="#contact">
+        <i class="material-icons left">call</i>
+        <div class="truncate">{{__ "MFS.navigation.contact"}}</div>
+      </a>
+    </li>
+    {{#if currentUser}}
+      <li class="waves-effect">
+        <a href="#account">
+          <i class="material-icons left">settings</i>
+          <div class="truncate">{{__ "MFS.navigation.account"}}</div>
+        </a>
+      </li>
+      {{#if isAdmin}}
+        <li class="waves-effect">
+          <a href="#admin">
+            <i class="material-icons left">new_releases</i>
+            <div class="truncate">{{__ "MFS.navigation.admin"}}</div>
+          </a>
+        </li>
+      {{/if}}
+      <li class="waves-effect">
+        <a href="" class="js-signInOut">
+          <i class="material-icons left">lock_outline</i>
+          <div class="truncate">{{__ "MFS.navigation.signout"}}</div>
+        </a>
+      </li>
+    {{else}}
+      <li class="waves-effect">
+        <a href="" class="js-signInOut">
+          <i class="material-icons left">lock_open</i>
+          <div class="truncate">{{__ "MFS.navigation.signin"}}</div>
+        </a>
+      </li>
+    {{/if}}
+  </ul>
+
+  <!-- sliding sidebar navigation -->
+  <ul id="slide-out" class="sidenav">
+    {{> navbarItemMessages activePage=activePage}}
+    {{> navbarItemTerms activePage=activePage}}
+    {{> navbarItemContact activePage=activePage}}
+    {{> navbarItemAccount activePage=activePage}}
+    {{> navbarItemAdmin activePage=activePage}}
+    {{> navbarItemSignInOut activePage=activePage}}
+  </ul>
+</template>
+
+<template name="navbarItem">
+  <li class="{{active}} navbarItemSelector">
+    {{> UI.contentBlock}}
+  </li>
+</template>
+
+<template name="navbarItemMessages">
+  {{#if currentUser}}
+    {{#navbarItem pageName="home" activePage=activePage}}
+      <a href="#messages" class="sidenav-close">
+        <div class="valign-wrapper">
+          <i class="material-icons">comment</i>
+          &nbsp;&nbsp;&nbsp;
+          {{__ "MFS.navigation.messages"}}
+        </div>
+      </a>
+    {{/navbarItem}}
+  {{/if}}
+</template>
+
+<template name="navbarItemAdmin">
+  {{#if isAdmin}}
+    {{#navbarItem pageName="home" activePage=activePage}}
+      <a href="#admin" class="sidenav-close">
+        <div class="valign-wrapper">
+          <i class="material-icons">new_releases</i>
+          &nbsp;&nbsp;&nbsp;
+          {{__ "MFS.navigation.admin"}}
+        </div>
+      </a>
+    {{/navbarItem}}
+  {{/if}}
+</template>
+
+<template name="navbarItemSettings">
+  {{#if currentUser}}
+    {{#navbarItem pageName="settings" activePage=activePage}}
+      <a href="#account" class="sidenav-close">
+        <div class="valign-wrapper">
+          <i class="material-icons">settings</i>
+          &nbsp;&nbsp;&nbsp;
+          {{__ "MFS.navigation.account"}}
+        </div>
+      </a>
+    {{/navbarItem}}
+  {{/if}}
+</template>
+
+<template name="navbarItemProfile">
+  {{#if currentUser}}
+    {{#navbarItem pageName="profileView" activePage=activePage}}
+      <a href="#profile/currentPage=profile" class="sidenav-close">
+        <div class="valign-wrapper">
+          <i class="material-icons">person</i>
+          &nbsp;&nbsp;&nbsp;
+          {{__ "MFS.navigation.profile"}}
+        </div>
+      </a>
+    {{/navbarItem}}
+  {{/if}}
+</template>
+
+<template name="navbarItemTerms">
+  {{#navbarItem pageName="terms" activePage=activePage}}
+    <a href="#terms" class="sidenav-close">
+      <div class="valign-wrapper">
+        <i class="material-icons">library_books</i>
+        &nbsp;&nbsp;&nbsp;
+        {{__ "MFS.navigation.terms"}}
+      </div>
+    </a>
+  {{/navbarItem}}
+</template>
+
+<template name="navbarItemContact">
+  {{#navbarItem pageName="contact" activePage=activePage}}
+    <a href="#contact" class="sidenav-close">
+      <div class="valign-wrapper">
+        <i class="material-icons">call</i>
+        &nbsp;&nbsp;&nbsp;
+        {{__ "MFS.navigation.contact"}}
+      </div>
+    </a>
+  {{/navbarItem}}
+</template>
+
+<template name="navbarItemAccount">
+  {{#navbarItem pageName="contact" activePage=activePage}}
+    {{#if currentUser}}
+      <a href="#account" class="sidenav-close">
+        <div class="valign-wrapper">
+          <i class="material-icons">settings</i>
+          &nbsp;&nbsp;&nbsp;
+          {{__ "MFS.navigation.account"}}
+        </div>
+      </a>
+    {{else}}
+      <a href="" class="js-signInOut">
+        <div class="valign-wrapper">
+          <i class="material-icons">lock_open</i>
+          &nbsp;&nbsp;&nbsp;
+          {{__ "MFS.navigation.signin"}}
+        </div>
+      </a>
+    {{/if}}
+  {{/navbarItem}}
+</template>
+
+<template name="navbarItemSignIn">
+  {{#unless currentUser}}
+    {{#navbarItem pageName="none" activePage=activePage}}
+      <a href="" class="js-signInOut">
+        <div class="valign-wrapper">
+          <i class="material-icons">lock_open</i>
+          &nbsp;&nbsp;&nbsp;
+          {{__ "MFS.navigation.signin"}}
+        </div>
+      </a>
+    {{/navbarItem}}
+  {{/unless}}
+</template>
+
+<template name="navbarItemSignInOut">
+  {{#navbarItem pageName="none" activePage=activePage}}
+    {{#if currentUser}}
+      <a href="" class="js-signInOut">
+        <div class="valign-wrapper">
+          <i class="material-icons">lock_outline</i>
+          &nbsp;&nbsp;&nbsp;
+          {{__ "MFS.navigation.signout"}}
+        </div>
+      </a>
+    {{/if}}
+  {{/navbarItem}}
+</template>

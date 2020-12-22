@@ -1,0 +1,2 @@
+// imports
+import './flatCard.html'

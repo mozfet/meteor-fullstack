@@ -5,30 +5,30 @@
 # but you can also edit it by hand.
 
 meteor-base@1.4.0             					    # Packages every Meteor app needs to have
-mongo@1.9.0											# The most popular no-sql object orientated database
+mongo@1.10.1											# The most popular no-sql object orientated database
 allow-deny@1.1.0                                    # Allow or deny client access to documents
 mobile-experience@1.1.0       					    # Packages for a great mobile UX
 blaze-html-templates                                # Compile .html files into Meteor Blaze views
 tracker@1.2.0                 					    # Meteor's client-side reactive programming library
 reactive-var@1.0.11								    # Variables that react when they change
 session@1.2.0                        		        # Client-side reactive dictionary for your app
-email@1.2.3                                         # For sending email
-dynamic-import@0.5.1                                # Conditional lazy importing
-standard-minifier-css@1.6.0                         # Minify css files for size optimisation
+email@2.0.0                                         # For sending email
+dynamic-import@0.5.5                                # Conditional lazy importing
+standard-minifier-css@1.7.1                         # Minify css files for size optimisation
 standard-minifier-js@2.6.0                          # Minify js files for size optimisation
 es5-shim@4.8.0                		                # ECMAScript 5 compatibility for older browsers.
-ecmascript@0.14.2              		                # Enable ECMAScript2015+ syntax in app code
+ecmascript@0.14.4              		                # Enable ECMAScript2015+ syntax in app code
 
 indesign:validated-method                           # What can possibly be better than Cross Platform Validated Methods?
 alanning:roles@3.2.3                                #
 universe:i18n                                       #
-service-configuration                               #
+service-configuration@1.0.11                               #
 
 fourseven:scss@4.12.0                               # SASS for stylesheets
 kadira:blaze-layout@2.3.1   	                    # Layout manager for blaze (works well with FlowRouter)
 matb33:collection-hooks@1.0.0			            # MongoDB collection hooks
 ostrio:flow-router-extra      			            # Carefully extended flow-router with waitOn and template context
-accounts-password@1.6.0								# Accounts are used to keep customer data save
+accounts-password@1.6.3								# Accounts are used to keep customer data save
 
 zodiase:material-design-icons-fonts		            # Materialize icons to avoid loading in apps
 mozfet:materialize-icons                            # Reactive materialize icons with tooltips
@@ -53,3 +53,4 @@ peerlibrary:reactive-publish@0.10.0                 # Cannot upgrade to 0.10.0 d
 shell-server@0.5.0                                  # ?
 
 msavin:parrot
+standard-minifiers

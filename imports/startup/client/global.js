@@ -6,9 +6,7 @@
 // imports
 import { Meteor } from 'meteor/meteor'
 import { Template } from 'meteor/templating'
-import { Session } from 'meteor/session'
 import { Access } from 'meteor/mozfet:access'
-import { check, Match } from 'meteor/check'
 
 export let globalSubscriptionHandler
 

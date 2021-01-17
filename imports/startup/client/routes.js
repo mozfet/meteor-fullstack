@@ -1,8 +1,5 @@
 // imports
-import { Blaze } from 'meteor/blaze'
-import { Template } from 'meteor/templating'
 import { _ } from 'meteor/underscore'
-import { Roles } from 'meteor/alanning:roles'
 import { Log } from 'meteor/mozfet:meteor-logs'
 import { Access } from 'meteor/mozfet:access'
 import Layout from '/imports/ui/components/Layout'
@@ -32,6 +29,7 @@ function normaliseUsername() {
 Router.register({
   home: async parameters => {
     Log.log(['debug', 'routing'], 'Viewing home:', parameters)
+    await import('/imports/ui/pages/home/homePage.js')
     Layout.set('body', 'homePage')
     Router.set('currentPage', 'home')
   },

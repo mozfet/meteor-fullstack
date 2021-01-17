@@ -6,6 +6,7 @@ import { Access } from 'meteor/mozfet:access'
 import { signUpSchema } from './schemas/signUpSchema.js'
 import { updateAccountSchema } from './schemas/updateAccountSchema.js'
 import users from './collection.js'
+import roleNames from './roleNames'
 Log.log(['debug', 'load'], `Loading module ${module.id}.`)
 
 /**
@@ -22,19 +23,19 @@ export const createUser = new ValidatedMethod({
 
   // method
   run({ email, username, password, firstName, lastName }) {
+    Log.log(['debug', 'accounts', 'method'], 'arguments:', arguments)
 
     // if running on the server
     if (Meteor.isServer) {
 
       // create user
-      const userId = Accounts.createUser({ email, password, username,
-          profile: {firstName, lastName} })
-      Log.log(['debug', 'accounts', 'method'],
-          `Created user for username ${username}, email ${email}.`)
+      const userId = Accounts.createUser({ email, password, username, profile: {firstName, lastName} })
+      Log.log(['debug', 'accounts', 'method'], `Created user for username ${username}, email ${email}.`)
       // return id of created user
       return userId
     }
 
+    // return nothing
     return undefined
   }
 })
@@ -85,11 +86,12 @@ export const updateUser = new ValidatedMethod({
  * Export API by default
  **/
  export default {
+   roleNames,
    collection: users,
-   create() {
-     return createUser.call(arguments)
+   create(options) {
+     return createUser.call(options)
    },
-   update() {
-     return updateUser.call(arguments)
+   update(options) {
+     return updateUser.call(options)
    }
  }

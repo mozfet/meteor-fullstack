@@ -17,6 +17,14 @@
       "stage": "fullstack.eu.meteorapp.com"
     }
   },
+  "administrators": [
+    {
+      "username": "mozfet",
+      "email": "wynand@expertbox.com",
+      "firstName": "Wynand",
+      "lastName": "Vermeulen"
+    }
+  ],
   "mongodb": {
     "hosts": {
       "prod": "",

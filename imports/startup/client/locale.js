@@ -30,3 +30,10 @@ let lang = getLang()
 i18n.setLocale(lang)
 
 Log.log(['debug', 'locale'], `Translate ${i18n.__('MFS.title')}.`)
+
+// register global template helper
+Template.registerHelper('__', function(key, options) {
+  const instance = Template.instance()
+  return i18n.__(key, options)
+})
+

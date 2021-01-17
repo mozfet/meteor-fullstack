@@ -13,7 +13,7 @@ Special features built in and ready to rock:
 - Customizable Colors and Headers using SASS
 - CDN fronted media for web loads, local media for devices, for optimised download speeds
 - Seach Engine Optimization using Prerender.io
-- User Accounts: Password, Facebook, Google, LinkedIn, BioCryptology
+- User Accounts: Password, Facebook, LinkedIn
 - Mailgun integration for sending email validation and password reset notifications
 - Mailchimp integration for building email lists when new users register
 - Braintree Payment Gateway integration for accepting Credit Cards and PayPal
@@ -22,7 +22,8 @@ Special features built in and ready to rock:
 - Blaze MaterializeCSS Single Page application layout including fixed Navigation Bar and bottom of scroll page Footer
 - Mobile configuration for iOS and Android applications
 - Automatically generated Splash Screens, Icons and Favicons, for iOS and Android for submission to App Stores, Bookmarks, Toolbars and Search Bars.
-- Internationalization
+- Internationalization, multi language
+- Client Side Routing using Parrot
 - Karma and Chai configured for Granular Unit Testing (in progress)
 
 This repository contains an Meteor template application with a powerful stack of packages, configured and ready to rock and roll:
@@ -38,8 +39,6 @@ This repository contains an Meteor template application with a powerful stack of
 - tracker
 - dynamic-import
 - blaze-html-templates
-- kadira:flow-router
-- kadira:blaze-layout
 - Meteor Accounts
 - accounts-password
 - useraccounts:flow-routing
@@ -48,6 +47,8 @@ This repository contains an Meteor template application with a powerful stack of
 - matb33:collection-hooks
 - fourseven:scss
 - MaterializeCSS
+- msavin:parrot
+- universe:i18n
 - Moment.js and durations
 - SimpleSchema
 - aldeed:autoform
@@ -62,7 +63,7 @@ This repository contains an Meteor template application with a powerful stack of
 - mozfet:autoform-materialize
 - mozfet:autoform-materialize-modals
 
-Meteor Fullstack always try to make use of the latest versions of dependancies and build tools, however due to out of syunc development sicles and historic dependancies the tools do not always play well together. The lastest versions that have been found to work for Cross Platform development on an Apple Mac DEV environment is:
+Meteor Fullstack always try to make use of the latest versions of dependencies and build tools, however due to open source development cycles and historic dependencies the tools do not always play well together. The latest versions that have been found to work for Cross Platform development on an Apple Mac DEV environment is:
 - MacOS Mojave v10.14.2
 - Xcode v
 - Cocoa Pods v
@@ -72,27 +73,19 @@ Meteor Fullstack always try to make use of the latest versions of dependancies a
 - Android Studio v3.21
 - Meteor v
 
-- [ ] Create a customise project script that collects settings and update meteor, cordova, and mobile configs, build script, and npm deploy script with:
-- project name
-- project folder
-- server url
-- andriod
-  - generate keystore
-  - generate certificates
-- mailgun settings
-- mailchimp settings
-- braintree settings
+## Credits
+
+This open source project is maintained by The Expert Box B.V. as a thank you to the Open Source Community.
+
+Do you want to help this project improve? Check the [open issues on GitHub](https://github.com/mozfet/meteor-fullstack/issues). Merge requests welcome!
 
 ## Installation
 
-Clone this repo and modify it to suit your needs.
-If you are using the secure and unsecure scripts, you first have to install GPG2.
+Clone this repo and modify it to suit your needs.  If you want to use the secure and unsecure scripts, you need to install GPG2.
 
 ## Workflow (work in progress)
 
-- [ ] Complete all scripts to make this workflow possible.
-
-1. Edit ```fullstack-config.json```.
+1. Edit ```fullstack-config.json``` to represent your project configuration.
 2. Configure project ```$ meteor npm run config``` based on ```fullstack-config.json```.
 3. Change code to perform business logic.
 4. Bump version ```$ meteor npm run bump <type>``` where <type> is ```patch```/```minor```/```major```.

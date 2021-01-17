@@ -1,0 +1,55 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-base@1.4.0             					    # Packages every Meteor app needs to have
+mongo@1.9.0											# The most popular no-sql object orientated database
+allow-deny@1.1.0                                    # Allow or deny client access to documents
+mobile-experience@1.1.0       					    # Packages for a great mobile UX
+blaze-html-templates                                # Compile .html files into Meteor Blaze views
+tracker@1.2.0                 					    # Meteor's client-side reactive programming library
+reactive-var@1.0.11								    # Variables that react when they change
+session@1.2.0                        		        # Client-side reactive dictionary for your app
+email@1.2.3                                         # For sending email
+dynamic-import@0.5.1                                # Conditional lazy importing
+standard-minifier-css@1.6.0                         # Minify css files for size optimisation
+standard-minifier-js@2.6.0                          # Minify js files for size optimisation
+es5-shim@4.8.0                		                # ECMAScript 5 compatibility for older browsers.
+ecmascript@0.14.2              		                # Enable ECMAScript2015+ syntax in app code
+
+indesign:validated-method                           # What can possibly be better than Cross Platform Validated Methods?
+alanning:roles@3.2.3                                #
+universe:i18n                                       #
+service-configuration                               #
+
+fourseven:scss@4.12.0                               # SASS for stylesheets
+kadira:blaze-layout@2.3.1   	                    # Layout manager for blaze (works well with FlowRouter)
+matb33:collection-hooks@1.0.0			            # MongoDB collection hooks
+ostrio:flow-router-extra      			            # Carefully extended flow-router with waitOn and template context
+accounts-password@1.6.0								# Accounts are used to keep customer data save
+
+zodiase:material-design-icons-fonts		            # Materialize icons to avoid loading in apps
+mozfet:materialize-icons                            # Reactive materialize icons with tooltips
+
+aldeed:autoform                                     # Dynamic Generated Schema Based Forms
+aldeed:collection2 							        # Attach schemas to collections for automatic validation
+aldeed:template-extension                           # Inheritance for Meteor Templates
+
+mozfet:meteor-logs@1.1.0                            # Cross Platform, Polymorphic, Database Backed, Tagged and Coloured
+mozfet:access@0.2.1                                 # Simplified access control to subscriptions and users
+mozfet:dynaview@0.0.6                               # Dynamic View Management
+mozfet:materialize-payments@1.1.0                   # MaterializeCSS Styled Payments using Braintree
+mozfet:subscriptions@0.2.0                          # Time based subscription Products extending on mozfet:materialize-payments
+mozfet:autoform-materialize@5.0.3                   # MaterializeCSS Theme for AutoForm
+mozfet:autoform-materialize-modals@4.0.3            # MaterializeCSS Themed Modals for AutoForm
+mozfet:autoform-materialize-nouislider2@1.1.2       # MaterializeCSS Themed Slider Input Component
+
+meteortesting:mocha                                 #
+johanbrook:publication-collector  		            # Test a publication by collecting its output
+dburles:factory                                     # Create test data and generate fixtures
+peerlibrary:reactive-publish@0.10.0                 # Cannot upgrade to 0.10.0 due to dependancy on Typescript 2.4.1 which clashes with softwareero:accounts-t9n 1.3.11 which is an indirect dependancy of useraccounts:flow-routing 1.14.2
+shell-server@0.5.0                                  # ?
+
+msavin:parrot

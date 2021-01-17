@@ -17,6 +17,12 @@
     "appId": "306107110046137",
     "secret": "477da61b85fe26332e8589e1c4c111bf"
   },
+  "braintree": {
+    "environment": "Braintree.Environment.Sandbox",
+    "merchantId": "fjg36b9gh8kvwkkv",
+    "publicKey": "ytw8v8w7gb3pf5qv",
+    "privateKey": "706030b8da1d55f25627ccb1e690643c"
+  },
   "biocryptology": {
     "wellknownConfig": "http://is.sb.biocryptology.net/.well-known/openid-configuration",
     "loginStyle":  "popup",

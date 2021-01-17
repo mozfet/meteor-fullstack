@@ -1,7 +1,8 @@
 // imports
 import { Meteor } from 'meteor/meteor'
-import { check, Match } from 'meteor/check'
-import { _ } from 'meteor/underscore'
+import { Log } from 'meteor/mozfet:meteor-logs'
+
+Log.log(['debug', 'load'], `Loading module ${module.id}.`)
 
 // helper function to keep things DRY
 function publishUser(publications, userId, targetUserId) {

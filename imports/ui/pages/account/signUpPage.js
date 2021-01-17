@@ -2,7 +2,7 @@
 import { Meteor } from 'meteor/meteor'
 import { Template } from 'meteor/templating'
 import 'materialize-css/dist/js/materialize.js'
-// import '/imports/ui/components/DynaText'
+import '/imports/ui/components/DynaText'
 import AutoFrom from 'meteor/aldeed:autoform'
 import '/imports/api/cdn'
 import { Log } from 'meteor/mozfet:meteor-logs'

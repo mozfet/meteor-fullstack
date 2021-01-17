@@ -20,7 +20,7 @@ navigation.signout: Sign Out
 footer.services.header: Meteor Fullstack
 footer.services.content: We do great stuff.
 footer.links.header: Links
-footer.copyright: "&copy; 2019 - Just Kidding"
+footer.copyright: "&copy; 2019-2021 - Just Kidding. This is Open Source under MIT Licence."
 
 access.notAllowed: You do not have permission to view this content.
 

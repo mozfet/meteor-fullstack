@@ -1,7 +1,7 @@
 // imports
 import { Meteor } from 'meteor/meteor'
 import { Template } from 'meteor/templating'
-// import '/imports/ui/components/DynaText'
+import '/imports/ui/components/DynaText'
 import AutoFrom from 'meteor/aldeed:autoform'
 import '/imports/ui/components/account/signInFormEmailPassword.js'
 import '/imports/ui/components/account/signInThirdParty.js'

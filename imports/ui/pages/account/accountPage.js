@@ -1,7 +1,7 @@
 import { Meteor } from 'meteor/meteor'
 import { Template } from 'meteor/templating'
 import { ReactiveVar } from 'meteor/reactive-var'
-// import '/imports/ui/components/DynaText'
+import '/imports/ui/components/DynaText'
 import { updateAccountSchema } from '/imports/api/account/schemas/updateAccountSchema.js'
 import { updateUser } from '/imports/api/account/api.js'
 // import '/imports/ui/components/spinner'
